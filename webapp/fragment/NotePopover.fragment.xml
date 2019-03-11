@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns:l="sap.ui.layout">
+  <Dialog title="{i18n>displayNote}" class="sapUiContentPadding">
+    <content>
+         <l:VerticalLayout id="displayNote" class="sapUiResponsiveMargin">
+        <Label id="lblTitleDisplay" text="Title:" labelFor="txtNoteTitle" />
+        <Input id="txtNoteTitleDisplay" enabled="false" required="true"  />
+        <Label id="lblNoteDisplay" text="Note:" labelFor="txtNote" />
+        <TextArea id="txtNoteDisplay" width="100%"  enabled="false" required="true"/>
+        </l:VerticalLayout>
+
+
+<Input id="hiddenInstId" visible="false"/>
+    </content>
+    <buttons>
+      <Button text="Cancel" press="handleNoteCloseButton"/>
+      <Button id="btnEditNote" text="Edit" press="handleEditNoteButton"/>
+      <Button id="btnSaveEditedNote" text="Save" press="handleSaveEditedNoteButton" visible="false"/>
+      <Button id="btnDeleteNote" text="Delete" press="handleDeleteNoteButton"/>
+    </buttons>
+  </Dialog>
+</core:FragmentDefinition>

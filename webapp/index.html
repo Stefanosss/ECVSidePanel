@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+
+    <title>ECVSidePanel</title>
+
+    <script id="sap-ui-bootstrap"
+
+      src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+      data-sap-ui-libs="sap.m, sap.ui.table, sap.ui.layout, sap.ui.core, sap.ui.commons"
+      data-sap-ui-theme="sap_belize"
+      data-sap-ui-compatVersion="edge"
+      data-sap-ui-resourceroots='{"be.avelon.ecvsidepanel": ""}'
+      ui-xx-bindingSyntax="complex"
+      >
+
+
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script>
+     var oCompContainer = new sap.ui.core.ComponentContainer({
+          height : "100%"
+        })
+
+        new sap.m.Shell({
+          app: oCompContainer,
+          showLogout:false
+        }).placeAt("content");
+
+        var oComponent = sap.ui.component({
+          name: "be.avelon.ecvsidepanel",
+          manifestFirst: true,
+          async: true
+        }).then(function(oComponent){
+          oCompContainer.setComponent(oComponent);
+        });
+        
+    </script>
+  </head>
+
+  <body class="sapUiBody" id="content">
+  </body>
+
+</html>

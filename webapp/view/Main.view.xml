@@ -1,0 +1,30 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+  xmlns:ECV="be.avelon.ecvsidepanel.control" xmlns="sap.m"
+  controllerName="be.avelon.ecvsidepanel.controller.Main"
+  xmlns:c="sap.ui.commons"
+  xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+  height="100%" width="100%" xmlns:l="sap.ui.layout">
+   <Page enableScrolling="true"
+    title="{path: 'NodeValue'} {path: 'NodeName'}" titleLevel="H1"
+    showFooter="true" id="ecvPage">
+    <Breadcrumbs id="breadCrumbs"
+      class="sapUiSmallMarginBegin" />
+    <content>
+      <VBox id="navGroups" class="ecvNarrow ecvList"
+        items="{path:'Groups', templateShareable:false}">
+        <items>
+          <core:Fragment
+            fragmentName="be.avelon.ecvsidepanel.fragment.Group" type="XML" />
+        </items>
+      </VBox>
+    </content>
+    <footer>
+      <Toolbar>
+        <Button id="addButton" text="Add"
+          icon="sap-icon://add-document" enabled="false"
+          press="openAddPopOver" type="Emphasized" width="auto" />
+      </Toolbar>
+    </footer>
+  </Page>
+</mvc:View>

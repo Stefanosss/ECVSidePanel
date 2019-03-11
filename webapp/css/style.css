@@ -1,0 +1,92 @@
+/* Enter your custom styles here */
+/*.hdbflowgraph-numeric-icon-text {
+  position: relative;
+    vertical-align: super;
+    font-size: 10pt;
+    padding: 1pt;
+    padding-right:3pt;
+    left: -1.6rem;
+    border-radius: 4pt;
+    top: 0rem;
+    background-color: #FF0000;
+    color:#FFFFFF !important;
+    text-shadow: none !important;
+    height:1rem;
+}
+/*--------------------------------------------------------*/
+/* sidepanel */
+.ecvScroll{
+  position:absolute;
+  /*right:-1.1rem;*/ /*hide scrollbar*/
+  /*padding-right:5px;*/
+  top:0;
+  bottom:0;
+  overflow-X: hidden  !important;
+  overflow-Y: scroll  !important;
+  max-width:400px;
+}
+.ecvList{
+  background-color: #FFFFFF;
+  position:absolute;
+  right:0px;
+  /* min-height:100%; */ /* This causes a scrollbar on the 2nd page of Easy Context Search, commented by Dries Van Damme (12/05/2017) */
+  width:100%;
+}
+/*--------------------------------------------------------*/
+/*single panel header*/
+.ecvToolbar{
+  height:2rem;
+  margin-left:3% !important;
+  
+}
+.sapMPanelExpandableIcon{
+  height:2rem   !important;
+  width:1.5rem  !important;
+  line-height:2rem !important;
+}
+/*--------------------------------------------------------*/
+/*single panel content*/
+.sapMPanelContent{
+  padding-right:0 !important;
+  margin-right:0  !important;
+  padding-left:1.5rem;
+  overflow: hidden;
+  flex-wrap:wrap;
+  padding-top:0rem;
+  padding-bottom:0rem;
+}
+/*--------------------------------------------------------*/
+/*single record in panel content*/
+.record{
+  height:1.5em;
+  border-bottom-color:#009de0;
+  border-bottom-style:none;
+  border-bottom-width:1px;
+  align-items: center;
+  width:auto;
+  position:relative;
+  left:0;
+  right:0;
+}
+.record .sapMFlexItem{
+  position:initial !important;
+}
+.badge{
+  width: 2REM;
+    background-color: #009AE4;
+    padding-left:0.7rem;
+    padding-right: 0.2rem;
+    border-radius: 4pt;
+}
+.ecvItem{
+  overflow:hidden;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left:1rem;
+  margin-right:1rem;
+}
+
+.mySpacing{
+
+}
+/*--------------------------------------------------------*/

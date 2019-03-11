@@ -1,0 +1,47 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified"
+xmlns:l="sap.ui.layout">
+	
+  <Dialog title="{i18n>addAttachment}" class="sapUiContentPadding">
+    <content>
+      <l:VerticalLayout class="sapUiContentPadding">
+        <RadioButtonGroup id="grpAttachment" select="onSelectedAttachmentRadioButton">
+          <RadioButton id="rdbCreateAttachment" text="{i18n>popOverCreateAttachment}" selected="true"/>
+          <RadioButton text="{i18n>popOverCreateExternalDoc}"/>
+          <RadioButton text="{i18n>popOverCreateNote}"/>
+          <RadioButton text="{i18n>popOverCreatePrivateNote}"/>
+        </RadioButtonGroup>
+	  	
+	
+        <l:VerticalLayout class="sapUiContentPadding" id="componentsFileUploader" visible="false">
+        <u:FileUploader id="fileUploader" name="myFileUpload" uploadUrl="" tooltip="Upload your file" />
+        </l:VerticalLayout>
+        
+        <l:HorizontalLayout class="sapUiContentPadding" id="componentsExtDoc" visible="false">
+        <Label id="lblExtDocTitle" text="Title:" labelFor="txtExtDocTitle" />
+        <Input id="txtExtDocTitle" placeholder="Enter title ..." required="true"/>
+        <Label id="lblExtDocAddress" text="Address:" labelFor="txtExtDocAddress"/>
+        <Input id="txtExtDocAddress" placeholder="Enter address ..." required="true" />
+        </l:HorizontalLayout>
+         <l:HorizontalLayout id="componentsNote" visible="false">
+        <Label id="lblTitle" text="Title:" labelFor="txtNoteTitle" />
+        <Input id="txtNoteTitle" placeholder="Enter title ..." required="true" />
+        <Label id="lblNote" text="Note:" labelFor="txtNote" />
+        <TextArea id="txtNote" placeholder="Enter your note ..." width="100%" required="true"/>
+        </l:HorizontalLayout>
+         <l:HorizontalLayout id="componentsPrivateNote" visible="false">
+        <Label id="lblPrivateTitle" text="Title:" labelFor="txtPrivateNoteTitle" />
+        <Input id="txtPrivateNoteTitle" placeholder="Enter title ..." required="true"/>
+        <Label id="lblPrivateNote" text="Private Note:" labelFor="txtPrivateNote" />
+        <TextArea id="txtPrivateNote" placeholder="Enter your private note ..." width="100%" required="true"/>
+        </l:HorizontalLayout>
+      </l:VerticalLayout>
+    </content>
+    <buttons>
+      <Button text="Cancel" press="handleAttachmentCloseButton"/>
+      <Button id= "btnUploadAttachment" text="Create Attachment" press="handleUploadFileButton" visible="false"/>
+      <Button id= "btnCreateExtDoc" text="Create External Document" press="handleCreateExtDocButton" visible="false"/>
+      <Button id= "btnCreateNote" text="Create Note" press="handleCreateNoteButton" visible="false"/>
+      <Button id= "btnCreatePrivateNote" text="Create Private Note" press="handleCreatePrivateNoteButton" visible="false"/>
+    </buttons>
+  </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns="sap.m"
+  xmlns:core="sap.ui.core" xmlns:ECV="be.avelon.ecvsidepanel.control"
+  xmlns:temp="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+  <!--*************************************SubGroups*************************** -->
+  <VBox items="{path:'Subgroups', templateShareable:false}">
+    <items>
+      <Panel expandable="{= ${GroupId} !== 'SAPBWF' }" expanded="false">
+        <headerToolbar>
+          <Toolbar id="toolbarSubgroup" class="ecvToolbar">
+            <content>
+              <core:Icon src="sap-icon://folder" color="#666666" />
+             <Link text="{GroupText}" press="onNavToItem" class="ecvItem" visible="{= ${GroupId} === 'SAPBWF' || ${GroupId} === 'MDG' || ${GroupId} === 'NOTES' || ${GroupId} === 'EXTRA3'}"/>    <!-- press="onNavToItem" -->
+              <Label text="{GroupText}" class="ecvItem" visible="{= ${GroupId} !== 'SAPBWF' &amp;&amp; ${GroupId} !== 'MDG' &amp;&amp; ${GroupId} !== 'NOTES' &amp;&amp; ${GroupId} !== 'EXTRA3' }"/>
+            </content>
+          </Toolbar>
+        </headerToolbar>
+        <content>
+          <core:Fragment
+            fragmentName="be.avelon.ecvsidepanel.fragment.Item" type="XML" />
+        </content>
+      </Panel>
+    </items>
+  </VBox>
+
+  <!--*************************************/SubGroups*************************** -->
+</core:FragmentDefinition>

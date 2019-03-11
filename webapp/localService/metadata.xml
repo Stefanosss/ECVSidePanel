@@ -1,0 +1,136 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="/AVELON/BORV_UI5_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="BOR" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Instid"/>
+                    <PropertyRef Name="Typeid"/>
+                    <PropertyRef Name="Catid"/>
+                </Key>
+                <Property Name="Instid" Type="Edm.String" Nullable="false" MaxLength="70" sap:label="Instance ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Typeid" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Object Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Catid" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Object Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NodeName" Type="Edm.String" Nullable="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NodeValue" Type="Edm.String" Nullable="false" sap:label="Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NaviUrl" Type="Edm.String" sap:label="URL (As Specified by Browser)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreationDate" Type="Edm.DateTime" Precision="7" sap:label="Current Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreationTime" Type="Edm.Time" Precision="0" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedBy" Type="Edm.String" MaxLength="12" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangeDate" Type="Edm.DateTime" Precision="7" sap:label="Current Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangeTime" Type="Edm.Time" Precision="0" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedBy" Type="Edm.String" MaxLength="12" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ContentType" Type="Edm.String" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Content" Type="Edm.Binary" sap:label="Binary String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Contents" Type="Edm.String" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ParentIdx" Type="Edm.String" sap:label="Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="Groups" Relationship="/AVELON/BORV_UI5_SRV.BOR2Groups" FromRole="FromRole_BOR2Groups" ToRole="ToRole_BOR2Groups"/>
+            </EntityType>
+            <EntityType Name="Group" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Mandt"/>
+                    <PropertyRef Name="GroupType"/>
+                    <PropertyRef Name="GroupId"/>
+                </Key>
+                <Property Name="Mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GroupType" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Group Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GroupId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Group ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Class" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="ObjectTypeName" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Method" Type="Edm.String" Nullable="false" MaxLength="61" sap:label="Interface Comp." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sequence" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Counter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GroupText" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Active" Type="Edm.Boolean" Nullable="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NodeName" Type="Edm.String" Nullable="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NodeValue" Type="Edm.String" Nullable="false" sap:label="Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="Items" Relationship="/AVELON/BORV_UI5_SRV.Group2Items" FromRole="FromRole_Group2Items" ToRole="ToRole_Group2Items"/>
+                <NavigationProperty Name="Subgroups" Relationship="/AVELON/BORV_UI5_SRV.Group2Subgroups" FromRole="FromRole_Group2Subgroups" ToRole="ToRole_Group2Subgroups"/>
+            </EntityType>
+            <EntityType Name="Subgroup" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="GroupText"/>
+                </Key>
+                <Property Name="Mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GroupType" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Group Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GroupId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Group ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Class" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="ObjectTypeName" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Method" Type="Edm.String" Nullable="false" MaxLength="61" sap:label="Interface Comp." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sequence" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Counter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GroupText" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Active" Type="Edm.Boolean" Nullable="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Instid" Type="Edm.String" Nullable="false" MaxLength="70" sap:label="Instance ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Typeid" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Object Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Catid" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Object Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NaviUrl" Type="Edm.String" Nullable="false" sap:label="URL (As Specified by Browser)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="Items" Relationship="/AVELON/BORV_UI5_SRV.Subgroup2Items" FromRole="FromRole_Subgroup2Items" ToRole="ToRole_Subgroup2Items"/>
+            </EntityType>
+            <EntityType Name="Item" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Instid"/>
+                    <PropertyRef Name="Typeid"/>
+                    <PropertyRef Name="Catid"/>
+                </Key>
+                <Property Name="Instid" Type="Edm.String" Nullable="false" MaxLength="70" sap:label="Instance ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Typeid" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Object Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Catid" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Object Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NodeName" Type="Edm.String" Nullable="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NodeValue" Type="Edm.String" Nullable="false" sap:label="Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NaviUrl" Type="Edm.String" sap:label="URL (As Specified by Browser)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreationDate" Type="Edm.DateTime" Precision="7" sap:label="Current Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreationTime" Type="Edm.Time" Precision="0" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedBy" Type="Edm.String" MaxLength="12" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangeDate" Type="Edm.DateTime" Precision="7" sap:label="Current Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangeTime" Type="Edm.Time" Precision="0" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedBy" Type="Edm.String" MaxLength="12" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ContentType" Type="Edm.String" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Content" Type="Edm.Binary" sap:label="Binary String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Contents" Type="Edm.String" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ParentIdx" Type="Edm.String" sap:label="Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="BOR2Groups" sap:content-version="1">
+                <End Type="/AVELON/BORV_UI5_SRV.BOR" Multiplicity="*" Role="FromRole_BOR2Groups"/>
+                <End Type="/AVELON/BORV_UI5_SRV.Group" Multiplicity="*" Role="ToRole_BOR2Groups"/>
+            </Association>
+            <Association Name="Group2Items" sap:content-version="1">
+                <End Type="/AVELON/BORV_UI5_SRV.Group" Multiplicity="*" Role="FromRole_Group2Items"/>
+                <End Type="/AVELON/BORV_UI5_SRV.Item" Multiplicity="*" Role="ToRole_Group2Items"/>
+            </Association>
+            <Association Name="Group2Subgroups" sap:content-version="1">
+                <End Type="/AVELON/BORV_UI5_SRV.Group" Multiplicity="*" Role="FromRole_Group2Subgroups"/>
+                <End Type="/AVELON/BORV_UI5_SRV.Subgroup" Multiplicity="*" Role="ToRole_Group2Subgroups"/>
+            </Association>
+            <Association Name="Subgroup2Items" sap:content-version="1">
+                <End Type="/AVELON/BORV_UI5_SRV.Subgroup" Multiplicity="*" Role="FromRole_Subgroup2Items"/>
+                <End Type="/AVELON/BORV_UI5_SRV.Item" Multiplicity="*" Role="ToRole_Subgroup2Items"/>
+            </Association>
+            <EntityContainer Name="/AVELON/BORV_UI5_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="BOR" EntityType="/AVELON/BORV_UI5_SRV.BOR" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="Groups" EntityType="/AVELON/BORV_UI5_SRV.Group" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="Subgroups" EntityType="/AVELON/BORV_UI5_SRV.Subgroup" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="Items" EntityType="/AVELON/BORV_UI5_SRV.Item" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="BOR2Groups_AssocSet" Association="/AVELON/BORV_UI5_SRV.BOR2Groups" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="BOR" Role="FromRole_BOR2Groups"/>
+                    <End EntitySet="Groups" Role="ToRole_BOR2Groups"/>
+                </AssociationSet>
+                <AssociationSet Name="Group2Items_AssocSet" Association="/AVELON/BORV_UI5_SRV.Group2Items" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Groups" Role="FromRole_Group2Items"/>
+                    <End EntitySet="Items" Role="ToRole_Group2Items"/>
+                </AssociationSet>
+                <AssociationSet Name="Group2Subgroups_AssocSet" Association="/AVELON/BORV_UI5_SRV.Group2Subgroups" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Groups" Role="FromRole_Group2Subgroups"/>
+                    <End EntitySet="Subgroups" Role="ToRole_Group2Subgroups"/>
+                </AssociationSet>
+                <AssociationSet Name="Subgroup2Items_AssocSet" Association="/AVELON/BORV_UI5_SRV.Subgroup2Items" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Subgroups" Role="FromRole_Subgroup2Items"/>
+                    <End EntitySet="Items" Role="ToRole_Subgroup2Items"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="https://avelon07.corp.avelon.nl:44316/sap/opu/odata/avelon/BORV_UI5_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="https://avelon07.corp.avelon.nl:44316/sap/opu/odata/avelon/BORV_UI5_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

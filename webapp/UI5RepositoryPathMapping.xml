@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+
+<UI5RepMapping version="1.0" xmlns="sap.ui5.tools.repository.mapping">
+ <MappingEntries>
+
+  <MappingEntry
+   path              = "Component-changes.json"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "UI54546D58BE46F8EC1944267BCA1432A57DE1311FB" />
+
+  <MappingEntry
+   path              = "Component-preload.js"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "UI5B2B5D24238268DEF4FA05063EBE5142BBCACE17B" />
+
+  <MappingEntry
+   path              = "Component.js"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "Component.js" />
+
+  <MappingEntry
+   path              = "control"
+   is_folder         = "X"
+   internal_rep      = ""
+   internal_rep_path = "" />
+
+  <MappingEntry
+   path              = "control/Badge.js"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "control/Badge.js" />
+
+  <MappingEntry
+   path              = "control/BadgeRenderer.js"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "control/BadgeRenderer.js" />
+
+  <MappingEntry
+   path              = "controller"
+   is_folder         = "X"
+   internal_rep      = ""
+   internal_rep_path = "" />
+
+  <MappingEntry
+   path              = "controller/Main.controller.js"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "controller/Main.controller.js" />
+
+  <MappingEntry
+   path              = "css"
+   is_folder         = "X"
+   internal_rep      = ""
+   internal_rep_path = "" />
+
+  <MappingEntry
+   path              = "css/style.css"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "css/style.css" />
+
+  <MappingEntry
+   path              = "fragment"
+   is_folder         = "X"
+   internal_rep      = ""
+   internal_rep_path = "" />
+
+  <MappingEntry
+   path              = "fragment/Group.fragment.xml"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "fragment/Group.fragment.xml" />
+
+  <MappingEntry
+   path              = "fragment/Item.fragment.xml"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "fragment/Item.fragment.xml" />
+
+  <MappingEntry
+   path              = "fragment/Subgroup.fragment.xml"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "fragment/Subgroup.fragment.xml" />
+
+  <MappingEntry
+   path              = "i18n"
+   is_folder         = "X"
+   internal_rep      = ""
+   internal_rep_path = "" />
+
+  <MappingEntry
+   path              = "i18n/i18n.properties"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "i18n/i18n.properties" />
+
+  <MappingEntry
+   path              = "i18n/i18n_en_GB.properties"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "i18n/i18n_en_GB.properties" />
+
+  <MappingEntry
+   path              = "index.html"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "index.html" />
+
+  <MappingEntry
+   path              = "localService"
+   is_folder         = "X"
+   internal_rep      = ""
+   internal_rep_path = "" />
+
+  <MappingEntry
+   path              = "localService/metadata.xml"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "localService/metadata.xml" />
+
+  <MappingEntry
+   path              = "manifest.json"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "manifest.json" />
+
+  <MappingEntry
+   path              = "model"
+   is_folder         = "X"
+   internal_rep      = ""
+   internal_rep_path = "" />
+
+  <MappingEntry
+   path              = "model/models.js"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "model/models.js" />
+
+  <MappingEntry
+   path              = "neo-app.json"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "UI5B286271A536B86ED651FBB5320BA4B907C4EB39A"/>
+
+  <MappingEntry
+   path              = "resources.json"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "resources.json" />
+
+  <MappingEntry
+   path              = "util"
+   is_folder         = "X"
+   internal_rep      = ""
+   internal_rep_path = "" />
+
+  <MappingEntry
+   path              = "util/formatter.js"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "util/formatter.js" />
+
+  <MappingEntry
+   path              = "view"
+   is_folder         = "X"
+   internal_rep      = ""
+   internal_rep_path = "" />
+
+  <MappingEntry
+   path              = "view/Main.view.xml"
+   is_folder         = ""
+   internal_rep      = "B"
+   internal_rep_path = "view/Main.view.xml" />
+
+ </MappingEntries>
+</UI5RepMapping>

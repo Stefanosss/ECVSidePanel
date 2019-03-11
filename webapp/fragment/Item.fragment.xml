@@ -1,0 +1,46 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+  xmlns:ECV="be.avelon.ecvsidepanel.control" xmlns:c="sap.ui.commons" >
+  <VBox items="{path:'Items', templateShareable:false }">
+    <items>
+      <HBox class="record">
+          <core:Icon press="onDelete" src="sap-icon://delete"  visible="{= ${Group} === 'ARCHIVELNK'
+          &amp;&amp; ${DeleteAllowed} === 'X' }" class="size1" color="#666666"/>
+          <Link press="onNavToItem"
+          text="{ parts : [ 'NodeValue', 'Contents' ], formatter:'.formatter.noteitem'}"
+          class="ecvItem"
+          visible="{= ${Group} === 'NOTES' || ${Group} === 'PERSNOTE'}">
+          <tooltip>
+            <c:RichTooltip title="{NodeValue}" text="{Contents}"
+              imageSrc="../ecvside/note-2-24.png">
+            </c:RichTooltip>
+          </tooltip>
+        </Link>
+         <core:Icon press="onNavToItem" src="sap-icon://popup-window"
+         visible="{= ${Group} !== 'NOTES' &amp;&amp; ${Group} !== 'PERSNOTE' &amp;&amp; ${Group} !== 'ARCHIVELNK' &amp;&amp; ${Group} !== 'LINKS'
+         	&amp;&amp; ${Group} !== 'SAPBWF' 	&amp;&amp; ${Group} !== 'EXTRA3'}" color="#666666"/>
+                  <Link text="{NodeValue}" class="ecvItem" press="onNavToItem"
+          visible="{= ${Group} !== 'NOTES' &amp;&amp; ${Group} !== 'PERSNOTE'	&amp;&amp; ${Group} !== 'EXTRA3' &amp;&amp; ${Group} !== 'MDG'}" />
+          <!-- ADDED MDG FOR DEMO -->
+                    <Link text="{NodeValue}" class="ecvItem"
+          visible="{= ${Group} === 'MDG' &amp;&amp; ${Contents} !== ''}" >
+        <tooltip  visible="{= ${Group} !== 'LINKS'}">
+            <c:RichTooltip title="Long text" text="{Contents}"
+              imageSrc="../ecvside/note-2-24.png">
+            </c:RichTooltip>
+          </tooltip>
+          </Link>
+
+        <Link text="{NodeValue}" class="ecvItem"
+          visible="{= ${Group} === 'MDG' &amp;&amp; ${Contents} === ''}" >
+        </Link>
+           <!-- ADDED MDG FOR DEMO -->
+        <Label text="{NodeValue}" class="ecvItem"  visible="{= ${Group} === 'EXTRA3'}" />
+        <core:Icon src="sap-icon://navigation-right-arrow"
+          press="onShowSub" class="size1" color="#666666"
+          visible="{= ${Group} !== 'NOTES' &amp;&amp; ${Group} !== 'PERSNOTE' &amp;&amp; ${Group} !== 'ARCHIVELNK' &amp;&amp; ${Group} !== 'LINKS'
+&amp;&amp; ${Group} !== 'SAPBWF' &amp;&amp; ${Group} !== 'EXTRA3'  &amp;&amp; ${Group} !== 'MDG' }" />
+      </HBox>
+    </items>
+  </VBox>
+</core:FragmentDefinition>
